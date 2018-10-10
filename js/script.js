@@ -1,148 +1,85 @@
 // // Este evento permite carregar o JavaScript antes ...
-// window.addEventListener('load', iniciar);
-
-// function iniciar() {
-//     var inputExercicio01 = document.querySelector('#inputExercicio01');
-//     inputExercicio01.addEventListener('keyup', monitorarInput);
-// }
-
-// function monitorarInput() {
-//     var spanExercicio01 = document.querySelector('#ex01');
-//     spanExercicio01.textContent = this.value.length;
-// }
-
-//ESTRUTURA USANDO O IF
-// var num1 = parseInt(prompt('Digite o primeiro número: '));
-// var num2 = parseInt(prompt('Digite o segundo número: '));
-
-// if (num1 > num2) {
-//     alert(num1 + '>' + num2);
-// } else {
-//     if (num1 < num2) {
-//         alert(num1 + '<' + num2);
-//     } else {
-//         alert(num1 + '==' + num1);
-//     }
-// }
-
-//ESTRUTURA USANDO O SWITCH
-// var diaInt = parseInt(prompt('Informe um dia da semana entre 0 e 6: '));
-// var diaSemana = '';
-
-// switch (diaInt) {
-//     case 0:
-//         diaDaSemana = 'Domingo';
-//         break;
-//     case 1:
-//         diaDaSemana = 'Segunda-feira';
-//         break;
-//     case 2:
-//         diaDaSemana = 'Terça-feira';
-//         break;
-//     case 3:
-//         diaDaSemana = 'Quarta-feira';
-//         break;
-//     case 4:
-//         diaDaSemana = 'Quinta-feira';
-//         break;
-//     case 5:
-//         diaDaSemana = 'Sexta-feira';
-//         break;
-//     case 6:
-//         diaDaSemana = 'Sábado';
-//         break;
-
-//     default:
-//         diaDaSemana = 'Dia inválido!';
-// }
-// alert('Dia da semana: ' + diaDaSemana);
-
-// Exemplo com operador ternário (?),(:)
-// var av1 = parseFloat(prompt("Informe sua nota da AV1: "));
-// var av2 = parseFloat(prompt("Informe sua nota da AV2: "));
-// var media = (av1 + av2) / 2;
-// var situacao =
-//     (media >= 6) ?
-//     "Aprovado" //V
-//     :
-//     "Reprovado"; //F
-// alert("Situação: " + situacao + ", pois a média foi " + media);
-
-//SOMANDO NÚMEROS DE 1 A 100
-
-// var soma = 0;
-// var i = 1;
-// while (i <= 10) {
-//     soma += i;
-//     i++;
-// }
-// console.log('Soma dos elementos de 1 a 100: ' + soma);
-
-//Somando os números de 1 a 100
-//No do...while, o código do laço é executado pelo menos uma vez
-// var soma = 0;
-// var i = 1;
-// do {
-//     soma += i;
-//     i++;
-// } while (i <= 100);
-// console.log('Soma dos elementos de 1 a 100: ' + soma);
-
-// //Somando os números de 1 a 100
-// var soma = 0;
-// for (var i = 1; i <= 100; i++)
-//     soma += i;
-// console.log("Soma dos elementos de 1 a 100: " + soma);
-
-// function obterDiaDaSemana(dia) {
-//     var diaSemana = "";
-//     switch (dia) {
-//         case 0:
-//             diaSemana = "Domingo";
-//             break;
-//         case 1:
-//             diaSemana = "Segunda-feira";
-//             break;
-//         case 2:
-//             diaSemana = "Terça-feira";
-//             break;
-//         case 3:
-//             diaSemana = "Quarta-feira";
-//             break;
-//         case 4:
-//             diaSemana = "Quinta-feira";
-//             break;
-//         case 5:
-//             diaSemana = "Sexta-feira";
-//             break;
-//         case 6:
-//             diaSemana = "Sábado";
-//             break;
-//         default:
-//             diaSemana = "Dia inválido";
-//     }
-//     return diaSemana;
-// } //Exemplo de utilização: console.log(obterDiaDaSemana(2));
-
-// function somarElementos(de, ate) {
-//     var soma = 0;
-//     for (var i = de; i <= ate; i++)
-//         soma += i;
-//     return soma;
-// }
-// console.log(somarElementos(1, 100));
-// // console.log(somarElementos(2, 2000));
-
 window.addEventListener('load', iniciar);
 
-// Função para escrever nome
-// function escreverOla(nome) {
-//     alert('Olá, ' + nome + '!');
-// }
+function iniciar() {
+    var inputExercicio01 = document.querySelector('#inputExercicio01');
+    inputExercicio01.addEventListener('keyup', monitorarInput);
+}
 
-//Exercício 01
-// FAÇA UMA FUNÇÃO QUE RECEBA DOIS NÚMEROS E RETORNE A MÉDIA
+// EXERCÍCIO 00
+// FAÇA UMA FUNÇÃO PARA ESCREVER "Olá, (nome)!" NO
+CONSOLE:
+    function escreverOla(nome) {
+        console.log("Olá, " + nome + "!");
+    }
+escreverOla("Raphael"); //Olá, Raphael!
+escreverOla("Bruno"); //Olá, Bruno!
+escreverOla("Marcelle"); //Olá, Marcelle!
+
+// EXERCÍCIO 01
+// FAÇA UMA FUNÇÃO QUE RECEBA DOIS NÚMEROS E RETORNE A MÉDIA:
 function media(num1, num2) {
     var media = (num1 + num2) / 2;
-    console.log('MÉDIA: ' + media);
+}
+return 'MEDIA: ' + media;
+
+// EXERCÍCIO 02
+// CRIAR FUNÇÕES PARA ESCREVER NÚMEROS NO CONSOLE DE 1 ATÉ DETERMINADO VALOR, UTILIZANDO 'FOR':
+function escreverNumerosAte(ate) {
+    for (var i = 1; i <= ate; i++) {
+        console.log(i);
+    }
+    return 'contagem efetuada';
+}
+
+// EXERCÍCIO 03
+// CRIAR FUNÇÃO PARA EXIBIR OS NÚMEROS DIVISÍVEIS POR X
+// CONSIDERANDO O INTERVALO DE X A Y
+
+function divisiveisPor(x, y) {
+    for (var i = x; i <= y; i++) {
+        if (i % x == 0) {
+            console.log(i);
+        }
+    }
+}
+
+// EXERCÍCIO 04
+// CRIAR UMA FUNÇÃO PARA MOSTRAR O MAIOR E MENOR VALOR DE
+// UM VETOR DE NÚMEROS
+function maiorMenor(vetor) {
+    var menor = vetor[0];
+    var maior = vetor[0];
+
+    // MAIOR NÚMERO NO VETOR
+    // VAMOR ASSUMIR QUE O PRIMEIRO NÚMERO DIGITADO NO VETOR É O MAIOR
+    maior = vetor[0]
+    for (var i = 0; i < vetor.length; i++) {
+        if (vetor[i] > maior) {
+            maior = vetor[i];
+        }
+    }
+
+    // MENOR NÚMERO NO VETOR
+    // VAMOR ASSUMIR QUE O PRIMEIRO NÚMERO DIGITADO NO VETOR É O MENOR
+    menor = vetor[0]
+    for (var i = 0; i < vetor.length; i++) {
+        if (vetor[i] < menor) {
+            menor = vetor[i];
+        }
+    }
+
+    //CALCULA A SOMA E MÉDIA
+    soma = 0
+    for (var i = 0; i < vetor.length; i++) {
+        soma = soma + vetor[i]
+    }
+    media2 = soma / vetor.length;
+
+    // APRESENTAÇÃO DOS VALORES
+    console.log("MENOR: ", menor);
+    console.log("MAIOR: ", maior);
+
+    console.log("SOMA: ", soma);
+    console.log("MEDIA: ", media2.toFixed(2));
 }
